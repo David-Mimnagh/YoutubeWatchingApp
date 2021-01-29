@@ -11,17 +11,16 @@ let win;
 let isOnDiv = false;
 function createWindow () {
   // Create the browser window.
-  win = new BrowserWindow({frame: false,resizable:true, transparent: true, id:"testWin"})
+  win = new BrowserWindow({frame: false,resizable:true, transparent: true, id:"youtubeApp", width: 1200, height: 800})
   win.setMenu(null);
   win.setAlwaysOnTop(true, "floating");
   win.setVisibleOnAllWorkspaces(true);
   win.setFullScreenable(false);
-  debugger;
   // and load the index.html of the app.
   win.loadFile('index.html');
   
-  // Open the DevTools.
-  win.webContents.openDevTools();
+  // ****** Open the DevTools.
+  //win.webContents.openDevTools();
 
   // Emitted when the window is closed.
   win.on('closed', () => {

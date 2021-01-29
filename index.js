@@ -163,7 +163,8 @@
                     });
                 }
             };
-            xhttp.open("GET", "https://www.googleapis.com/youtube/v3/videos?key=AIzaSyAIv9qoygJNJ8slLL30AyrXE8LytwkL9Co&part=snippet&id=" + vidId, true);
+            var APIKEY = "INEEDAKEY";
+            xhttp.open("GET", `https://www.googleapis.com/youtube/v3/videos?key=${APIKEY}&part=snippet&id=` + vidId, true);
             xhttp.send();
         }
 
